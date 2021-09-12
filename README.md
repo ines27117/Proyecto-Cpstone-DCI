@@ -27,4 +27,3 @@ La problemática de este proyecto es el rigor con que se tiene que llevar acabo 
 - Determinar si cumple con determinadas normativas para que el  agua tratada pueda ser reutilizada en otros procesos (agrícola, industrial, domestico, etc.).
 - Aplicar técnicas de tratamiento a cuerpos de agua, en este caso del campo magnético.
 
-Hola
