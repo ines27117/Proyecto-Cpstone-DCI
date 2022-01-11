@@ -72,6 +72,7 @@ lsmod | grep -i w1_
 ```
 
 lo cual, si se habilito correctamente la interfaz, nos debe dar una pantalla similar a la siguiente:
+
 ![image](https://user-images.githubusercontent.com/64336142/148919728-37cf5325-a4a6-4b58-ac54-c2ac062f1aaf.png)
 
 ¡Listo!, has habilitado las dos interfaces necesarias para ejecutar este programa :)
