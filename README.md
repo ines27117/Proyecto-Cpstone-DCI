@@ -113,7 +113,7 @@ InfluxDB va a contener todos los datos de los diferentes circuitos de tal forma 
 
 Grafana será de gran utilidad a la hora de visualizar los datos de Influx, mostrando de forma clara los valores de los sensores. Se pueden crear paneles con diferentes gráficas para monitorear en tiempo real el sistema.
 
-## Instalación de MQTT broker
+#### Instalación de MQTT broker
 Para poder utilzar MQTT, también conocido como mosquitto, se debe de instalar y habilitar:
 ```
 sudo apt install mosquitto mosquitto-clients
@@ -127,7 +127,7 @@ node-red
 ```
 Con esto, y por defecto, se podrá acceder desde un navegador accediendo a la dirección: 127.0.0.1:1880
 
-## Instalación de InfluxDB
+#### Instalación de InfluxDB
 InfluxDB se puede utilizar de manera online, desde su propia página, o manera local, instalando en la propia máquina. Para este proyecto se hizo de manera local, por lo que se hizo la instalación de InfluxDB usando los comandos: 
 ```
 sudo apt install influxdb
@@ -143,7 +143,7 @@ En la parte de "http" se debe descomentar: "enabled = true" borrando el símbolo
 sudo service influxdb restart
 ```
 
-# Uso de bases con Influx
+##### Uso de bases con Influx
 Para facilitar el manejo de información, para cada circuito se hará una base de datos propia usando InfluxDB. Para hacer esto, desde una terminal se debe entrar a influx y crearla.
 ```
 influx
