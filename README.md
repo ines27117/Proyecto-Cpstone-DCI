@@ -96,7 +96,7 @@ main.py
 ```
 con tu IDE de Python 3.
 
-###Envío de datos
+### Envío de datos
 Para poder enviar los datos a través de MQTT es necesario instalar su propia libreria:
 
 ```
@@ -104,7 +104,7 @@ sudo pip3 install paho-mqtt
 ```
 Esto será suficiente para que el archivo pueda enviar los datos a través de cualquier broker haciendo usao de MQTT.
 
-###Uso de InfluxDB para almacenar los datos y visualización en Grafana
+### Uso de InfluxDB para almacenar los datos y visualización en Grafana
 Se hace uso de una base de datos para guardar todos resultados que el sistema envía, además que se necesita leer de forma clara todos estos valores. Para lograr esto se hace uso de Node-RED, InfluxDB y Grafana.
 
 Node-RED es una plataforma útil que ayuda a unificar varias tecnologías entre sí. Para este caso, va a permitir obtener los datos recibidos por MQTT y cambiar su formato de tal forma que se puedan almacenar en la base de datos de InfluxDB.
@@ -113,7 +113,7 @@ InfluxDB va a contener todos los datos de los diferentes circuitos de tal forma 
 
 Grafana será de gran utilidad a la hora de visualizar los datos de Influx, mostrando de forma clara los valores de los sensores. Se pueden crear paneles con diferentes gráficas para monitorear en tiempo real el sistema.
 
-##Instalación de MQTT broker
+## Instalación de MQTT broker
 Para poder utilzar MQTT, también conocido como mosquitto, se debe de instalar y habilitar:
 ```
 sudo apt install mosquitto mosquitto-clients
@@ -127,7 +127,7 @@ node-red
 ```
 Con esto, y por defecto, se podrá acceder desde un navegador accediendo a la dirección: 127.0.0.1:1880
 
-##Instalación de InfluxDB
+## Instalación de InfluxDB
 InfluxDB se puede utilizar de manera online, desde su propia página, o manera local, instalando en la propia máquina. Para este proyecto se hizo de manera local, por lo que se hizo la instalación de InfluxDB usando los comandos: 
 ```
 sudo apt install influxdb
@@ -138,7 +138,34 @@ Ahora solo falta modificar una pequeña parte de influx para que se pueda utiliz
 ```
 sudo nano /etc/influxdb/influxdb.conf
 ```
-En la parte de "http" se debe descomentar: "enabled = true" borrando el símbolo de gato
+En la parte de "http" se debe descomentar: "enabled = true" borrando el símbolo de gato. Ahora faltaría reiniciar influx para poder utilizarlo.
+```
+sudo service influxdb restart
+```
+
+# Uso de bases con Influx
+Para facilitar el manejo de información, para cada circuito se hará una base de datos propia usando InfluxDB. Para hacer esto, desde una terminal se debe entrar a influx y crearla.
+```
+influx
+```
+Con este comando se entra a la terminal de InfluxDB. Una vez dentro se crearán las bases que se necesiten usando:
+```
+create database "nombre de la base"
+```
+Y para ver las bases que se han creado se usa:
+```
+show databases
+```
+Si ya no se requiere una base o se quiere eliminar por cualquier motivo se utiliza el comando:
+```
+drop database "nombre de la base"
+```
+Para salir de Influx basta con poner
+```
+exit
+```
+
+
 
 
 
