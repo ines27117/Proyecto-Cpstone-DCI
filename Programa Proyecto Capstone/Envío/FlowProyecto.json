@@ -1,0 +1,450 @@
+[
+    {
+        "id": "b6e6793f7366bcac",
+        "type": "tab",
+        "label": "ProyectoCapstone",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "9811a76a78f497b8",
+        "type": "mqtt in",
+        "z": "b6e6793f7366bcac",
+        "name": "NivelAgua1",
+        "topic": "ProyectoCapstone/EquipoInes/Samsung/UAM/Sensores/NivelAgua1",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "edd3004a.11da88",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 150,
+        "y": 120,
+        "wires": [
+            [
+                "89abaf9ed476dc35"
+            ]
+        ]
+    },
+    {
+        "id": "89abaf9ed476dc35",
+        "type": "change",
+        "z": "b6e6793f7366bcac",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$number(payload)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 120,
+        "wires": [
+            [
+                "8cea71d707edbfb9",
+                "f6e93828b3cf8bdd"
+            ]
+        ]
+    },
+    {
+        "id": "4d49184af6fb67a5",
+        "type": "mqtt in",
+        "z": "b6e6793f7366bcac",
+        "name": "Temperatura",
+        "topic": "ProyectoCapstone/EquipoInes/Samsung/UAM/Sensores/Temperatura",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "edd3004a.11da88",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 150,
+        "y": 440,
+        "wires": [
+            [
+                "9c00393d5b90a002"
+            ]
+        ]
+    },
+    {
+        "id": "9c00393d5b90a002",
+        "type": "change",
+        "z": "b6e6793f7366bcac",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$number(payload)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 440,
+        "wires": [
+            [
+                "8cea71d707edbfb9",
+                "1c98360b0dcc70c6"
+            ]
+        ]
+    },
+    {
+        "id": "4c8b6ba634e95cd5",
+        "type": "mqtt in",
+        "z": "b6e6793f7366bcac",
+        "name": "Turbidez",
+        "topic": "ProyectoCapstone/EquipoInes/Samsung/UAM/Sensores/Turbidez",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "edd3004a.11da88",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 140,
+        "y": 360,
+        "wires": [
+            [
+                "c729e8629b03e006"
+            ]
+        ]
+    },
+    {
+        "id": "c729e8629b03e006",
+        "type": "change",
+        "z": "b6e6793f7366bcac",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$number(payload)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 360,
+        "wires": [
+            [
+                "8cea71d707edbfb9",
+                "e3ddc995d89e8a71"
+            ]
+        ]
+    },
+    {
+        "id": "8cea71d707edbfb9",
+        "type": "debug",
+        "z": "b6e6793f7366bcac",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "f6e93828b3cf8bdd",
+        "type": "influxdb out",
+        "z": "b6e6793f7366bcac",
+        "influxdb": "376746b7af5ffbb2",
+        "name": "NivelAgua1",
+        "measurement": "nivelAgua-1",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 830,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "1c98360b0dcc70c6",
+        "type": "influxdb out",
+        "z": "b6e6793f7366bcac",
+        "influxdb": "c6cdb8d68c3af12e",
+        "name": "Temperatura",
+        "measurement": "temperatura",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 830,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "e3ddc995d89e8a71",
+        "type": "influxdb out",
+        "z": "b6e6793f7366bcac",
+        "influxdb": "432f76d5d7c285df",
+        "name": "Turbidez",
+        "measurement": "turbidez",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 820,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "ebe1ce33a9c8a1bf",
+        "type": "mqtt in",
+        "z": "b6e6793f7366bcac",
+        "name": "NivelAgua2",
+        "topic": "ProyectoCapstone/EquipoInes/Samsung/UAM/Sensores/NivelAgua2",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "edd3004a.11da88",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 150,
+        "y": 200,
+        "wires": [
+            [
+                "beb2889da38833cc"
+            ]
+        ]
+    },
+    {
+        "id": "b9e1702c01ea0152",
+        "type": "mqtt in",
+        "z": "b6e6793f7366bcac",
+        "name": "NivelPH",
+        "topic": "ProyectoCapstone/EquipoInes/Samsung/UAM/Sensores/ph",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "edd3004a.11da88",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 130,
+        "y": 280,
+        "wires": [
+            [
+                "94104560117395f0"
+            ]
+        ]
+    },
+    {
+        "id": "beb2889da38833cc",
+        "type": "change",
+        "z": "b6e6793f7366bcac",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$number(payload)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 200,
+        "wires": [
+            [
+                "8cea71d707edbfb9",
+                "7b0b0dd998cdd9bc"
+            ]
+        ]
+    },
+    {
+        "id": "94104560117395f0",
+        "type": "change",
+        "z": "b6e6793f7366bcac",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$number(payload)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 280,
+        "wires": [
+            [
+                "8cea71d707edbfb9",
+                "a4ef9cbbc1d92adf"
+            ]
+        ]
+    },
+    {
+        "id": "7b0b0dd998cdd9bc",
+        "type": "influxdb out",
+        "z": "b6e6793f7366bcac",
+        "influxdb": "e50f47fbf7e9d493",
+        "name": "NivelAgua2",
+        "measurement": "nivelAgua-2",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 830,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "a4ef9cbbc1d92adf",
+        "type": "influxdb out",
+        "z": "b6e6793f7366bcac",
+        "influxdb": "193572fb3234f755",
+        "name": "NivelPH",
+        "measurement": "ph",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 820,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "edd3004a.11da88",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "18.158.198.79",
+        "port": "1883",
+        "clientid": "DarioPenalozaSIC-04",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "376746b7af5ffbb2",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": "8086",
+        "protocol": "http",
+        "database": "nivelAgua1",
+        "name": "Nivel del agua 1",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "1.x",
+        "url": "http://localhost:8086",
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "c6cdb8d68c3af12e",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": "8086",
+        "protocol": "http",
+        "database": "temperatura",
+        "name": "Temperatura del sistema",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "1.x",
+        "url": "http://localhost:8086",
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "432f76d5d7c285df",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": "8086",
+        "protocol": "http",
+        "database": "turbidez",
+        "name": "Nivel de turbidez",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "1.x",
+        "url": "http://localhost:8086",
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "e50f47fbf7e9d493",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": "8086",
+        "protocol": "http",
+        "database": "nivelAgua2",
+        "name": "Nivel del agua 2",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "1.x",
+        "url": "http://localhost:8086",
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "193572fb3234f755",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": "8086",
+        "protocol": "http",
+        "database": "ph",
+        "name": "Valores de PH",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "1.x",
+        "url": "http://localhost:8086",
+        "rejectUnauthorized": true
+    }
+]
