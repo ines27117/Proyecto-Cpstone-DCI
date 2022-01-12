@@ -96,6 +96,52 @@ main.py
 ```
 con tu IDE de Python 3.
 
+###Envío de datos
+Para poder enviar los datos a través de MQTT es necesario instalar su propia libreria:
+
+```
+sudo pip3 install paho-mqtt
+```
+Esto será suficiente para que el archivo pueda enviar los datos a través de cualquier broker haciendo usao de MQTT.
+
+###Uso de InfluxDB para almacenar los datos y visualización en Grafana
+Se hace uso de una base de datos para guardar todos resultados que el sistema envía, además que se necesita leer de forma clara todos estos valores. Para lograr esto se hace uso de Node-RED, InfluxDB y Grafana.
+
+Node-RED es una plataforma útil que ayuda a unificar varias tecnologías entre sí. Para este caso, va a permitir obtener los datos recibidos por MQTT y cambiar su formato de tal forma que se puedan almacenar en la base de datos de InfluxDB.
+
+InfluxDB va a contener todos los datos de los diferentes circuitos de tal forma que puedan ser usados por cualquier otro servicio, como Grafana.
+
+Grafana será de gran utilidad a la hora de visualizar los datos de Influx, mostrando de forma clara los valores de los sensores. Se pueden crear paneles con diferentes gráficas para monitorear en tiempo real el sistema.
+
+##Instalación de MQTT broker
+Para poder utilzar MQTT, también conocido como mosquitto, se debe de instalar y habilitar:
+```
+sudo apt install mosquitto mosquitto-clients
+
+sudo systemctl enable mosquitto
+```
+
+Para encender Node-RED se debe de hacer desde terminal usando: 
+```
+node-red
+```
+Con esto, y por defecto, se podrá acceder desde un navegador accediendo a la dirección: 127.0.0.1:1880
+
+##Instalación de InfluxDB
+InfluxDB se puede utilizar de manera online, desde su propia página, o manera local, instalando en la propia máquina. Para este proyecto se hizo de manera local, por lo que se hizo la instalación de InfluxDB usando los comandos: 
+```
+sudo apt install influxdb
+sudo apt install influxdb-client
+sudo service influxdb start
+```
+Ahora solo falta modificar una pequeña parte de influx para que se pueda utilizar. Escribiendo en una terminal: 
+```
+sudo nano /etc/influxdb/influxdb.conf
+```
+En la parte de "http" se debe descomentar: "enabled = true" borrando el símbolo de gato
+
+
+
 
 
 
