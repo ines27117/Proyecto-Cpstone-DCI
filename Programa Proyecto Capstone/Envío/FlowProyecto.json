@@ -245,7 +245,7 @@
         "type": "mqtt in",
         "z": "b6e6793f7366bcac",
         "name": "NivelPH",
-        "topic": "ProyectoCapstone/EquipoInes/Samsung/UAM/Sensores/ph",
+        "topic": "ProyectoCapstone/EquipoInes/Samsung/UAM/Sensores/PH",
         "qos": "2",
         "datatype": "auto",
         "broker": "edd3004a.11da88",
