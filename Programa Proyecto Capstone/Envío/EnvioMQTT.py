@@ -25,7 +25,7 @@ except:
 
 #Temas a los que se va a publicar información
 topicNivel1="ProyectoCapstone/EquipoInes/Samsung/UAM/Sensores/NivelAgua1"
-topicNivel2="ProyectoCapstone/EquipoInes/Samsung/UAM/Sensores/NivelAgua1"
+topicNivel2="ProyectoCapstone/EquipoInes/Samsung/UAM/Sensores/NivelAgua2"
 topicPH="ProyectoCapstone/EquipoInes/Samsung/UAM/Sensores/PH"
 topicTemp="ProyectoCapstone/EquipoInes/Samsung/UAM/Sensores/Temperatura"
 topicTurb="ProyectoCapstone/EquipoInes/Samsung/UAM/Sensores/Turbidez"
