@@ -29,7 +29,7 @@ La problemática de este proyecto es el rigor con que se tiene que llevar acabo 
 
 ### Circuito
 El esquema realizado para la observación de los datos fue el siguiente:
-![ProyectoCapstone_bb](https://user-images.githubusercontent.com/64336142/148916586-210c1b0c-3be5-4281-9fe5-823d2ed396dc.png)
+![ProyectoCapstone_bb](https://user-images.githubusercontent.com/64336142/149452924-879e6827-8ae6-40a9-a864-bc96b17d29d3.png)
 
 ### Interfaces necesarias
 Para correr el programa principal de este repositorio es necesario habilitar las interfaces i2c y 1-wire dentro de la raspberry pi, para esto es necesario ejecutar el siguiente comando en la terminal de la raspberry:
