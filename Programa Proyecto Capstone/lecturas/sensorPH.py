@@ -1,3 +1,4 @@
+# Programa creado por Mejia Bazan Cesar Arturo 2182005565
 import time
 import board
 import busio
