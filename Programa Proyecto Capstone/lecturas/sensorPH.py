@@ -17,6 +17,6 @@ def obtenerPH():
     voltaje = voltaje/5
     voltaje = round(voltaje,2)
     # Ecuación de la recta
-    ph = round((-voltaje + 22.115)/5.7692 , 1)
+    ph = round((-5.7692*voltaje)+22.115, 1)
 #     print("v:",voltaje, "ph:", ph)
     return ph;
