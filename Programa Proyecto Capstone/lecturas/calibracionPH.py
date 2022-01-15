@@ -103,7 +103,7 @@ def calibrarPH(channel):
                 break
             except:
                 print("Los datos que ingresaste son incorrectos")
-        # Se comienza a calibar con las soluciones de PH personalizadas
+        # Se comienza a calibrar con las soluciones de PH personalizadas
         calibrar(channel, sol_1, sol_2)
     else:
         sys.exit("Error inesperado seleccionado una opción")
