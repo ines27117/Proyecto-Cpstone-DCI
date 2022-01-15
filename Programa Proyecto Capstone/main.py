@@ -4,7 +4,7 @@ import paho.mqtt.client as mqtt
 from lecturas import turbidez, nivel_agua, temperatura, sensorPH
 
 broker="18.158.198.79"
-#Trata la conección de un usuario al broker
+#Trata la conexión de un usuario al broker
 try:
     cliente=mqtt.Client("aewno-bgtdytd")
     cliente.connect(broker)
