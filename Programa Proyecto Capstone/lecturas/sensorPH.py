@@ -7,7 +7,7 @@ from adafruit_ads1x15.analog_in import AnalogIn
 
 
 def obtenerPH():
-    # Se inicializa el canal donde se va a leer el voltaje de la turbidez
+    # Se inicializa el canal donde se va a leer el voltaje
     i2c = busio.I2C(board.SCL, board.SDA)
     ads = ADS.ADS1115(i2c)
     # Se lee el canal en donde esta conectado el sensor de PH, en este caso es el A1 del ADS1115
