@@ -1,31 +1,26 @@
 # Proyecto-Cpstone-DCI
-Nombre: "Implementación del IoT para el monitoreo del agua en su tratamiento con campo magnético".
+Nombre: "Instrumentacion e implementacion del IoT en un filtro de aguas grises".
 
-Innovar en este proyecto es insoslayable retomar e incorporar a nuestra cotidianidad la tecnología, es mi proyecto que es cosechar agua de lluvia dentro de procedimientos innovadoras (aplicando toda la creatividad y las nuevas tecnologías) para cosechar agua de lluvia o incorporar agua grises de usos domestico y reciclarla utilizándola en nuestro día a día.
+El agua es un recurso indispensable para la subsistencia de cualquier organismo vivo en el planeta tierra, al igual que es indisociable de cualquier actividad hecha por los seres humanos desde aspectos de la vida cotidiana como hidratarnos, asearnos, las labores de la casa, por mencionar algunos, hasta procesos más complejos como ocurre en la industria extractiva, metalúrgica, química, alimentaria, farmacéutica, de textiles, papelera etc.
 
-La idea del prototipo de proyecto es conducir el agua residual a través de un campo magnético, esta pasara  través de una tubería de vidrio. La función del campo magnético es reordenar las partículas de las sales  como: Carbonato de calcio, nitritos nitratos. nitrógeno amoniacal, etc. e incluso influir en los microorganismos que viven en la muestra de agua.
+A medida que fueron evolucionando estos tipos de industrias y fue cambiando el estilo de vida urbanita, se agravaron las problemáticas entorno al medio ambiente por la constante emisión de contaminantes, la sobre explotación de los recursos naturales, en particular el agua en la que influye determinantemente el crecimiento demográfico.
 
-Como sabemos todos los organismos vivos tenemos un campo magnético. Todos somos energía y estamos compuestos por electrones, protones, neutrones. Así que someternos a la influencia de un campo magnético adicional puede tener un efecto benéfico en la organización y metabolización de los seres vivos (en caso de de acelerar su metabolismos estos consumirán algunos nutrientes en el agua y por ende incrementara la biodegradación).
-En el caso de las sales, al ser influenciadas por el CM cambian su morfología, por ejemplo el carbonato de calcio y así prevenir o disminuir la formación de incrustaciones en las tuberías.
+Actualmente a nivel mundial se ha vuelto una “tendencia” la preocupación por la recuperación de estos ecosistemas, muchas organizaciones, empresas e industrias están migrando a las Tecnologías limpias (verdes), que de acuerdo con la definición de la ONU en la agenda 2021, son los procesos y productos que protegen el ambiente, que son menos contaminantes, usan los recursos de forma sustentable, reciclan sus residuos y productos y manejan los desechos residuales de una manera aceptable. 
 
-Lo innovador en el proyecto seria la implementación del internet de las cosas para medir los parámetros del agua al salir del campo magnético y determinar su calidad con algunos electrodos (ph, nitrógeno amoniacal, temperatura, oxido reductor, etc) y esto se tendría que comparar con los datos registrados en la NOM para determinar su calidad.
+En la agenda 2030 de la ONU se plantean 17 objetivos del desarrollo sostenible, uno de estos abarca el punto sobre el “agua y saneamiento” donde muestran cifras alarmantes de que, en un futuro cercano más del 40 por ciento de las personas en el mundo sufran escasez de agua recurrente, experimentando el estrés hídrico y el aumento de la sequía y la desertificación. Por lo que se propone que los gobiernos inviertan en infraestructura adecuada, proporcionando instalaciones de saneamiento para la protección y restauración de los ecosistemas vinculados con el tema del agua, así como garantizar el agua en calidad y cantidades adecuadas para las personas.
 
-Cabe resaltar que el agua que se va obtener después del tratamiento no será potables, mas bien agua limpia, agua tratada que se podrá reutilizar para otros procesos e incluso de podría conducir a un humedal para continuar con su tratamiento o mandarla directamente para riego de cultivos extensos o tecnificados.
+Por otra parte, así como el agua es indisociable de las actividades del ser humano, el internet de las cosas se ha vuelto un tema emergente que enfrenta muchos desafíos y te da la posibilidad de solucionar todo tipo de problemáticas haciendo más eficiente el trabajo cotidiano, por lo que recolectar el agua va a ser un trabajo oficios que nos va a demandar tiempo y tecnología para poder acceder a este bien.
 
-La problemática de este proyecto es el rigor con que se tiene que llevar acabo las medición de los parámetros, ya que en algunos artículos se mencionan mediciones de hasta 90 días, 30 o 15 días.
 
-### Objetivos Generales
+### Objetivo General
 
-- Analizar y observar los efectos del campo magnético en la remoción de nutrientes y carga orgánica en tratamiento del agua residual domestica y del agua de lluvia.
-- Aplicar distintas intensidades del campo magnético para determinar con cuales se obtienen resultados más óptimos.
-- ODS: Garantizar la disponibilidad del agua y su gestión sostenible y saneamiento para todos.
+- Dentro de este trabajo el objetivo general es crear un modelo básico (mínimo indispensable) del internet de las cosas donde se articulen varios sensores y se envíe información sobre los parámetros del agua residual.
 
 ### Objetivos especificos:
 
-- Crear un modelo básico del internet de las cosas donde se puedan articular sensores y enviar información sobre los parámetros del agua residual por medio del internet.
-- Desarrollar un programa donde se pueda tener un registro de los datos obtenidos del agua residual después de pasar por el tratamiento.
-- Determinar si cumple con determinadas normativas para que el  agua tratada pueda ser reutilizada en otros procesos (agrícola, industrial, domestico, etc.).
-- Aplicar técnicas de tratamiento a cuerpos de agua, en este caso del campo magnético.
+- Diseñar un sistema de filtración de aguas grises manteniendo el flujo a presión.
+- Determinar qué tipo de materiales son adecuados para una filtración eficiente de las aguas residuales domésticas.
+- Desarrollar programas para la interconexión de los sensores asi como una base de datos donde se pueda tener un registro continuo de los datos obtenidos del agua, antes y después de pasar por el sistema de filtros.
 
 ### Circuito
 El esquema realizado para la observación de los datos fue el siguiente:
